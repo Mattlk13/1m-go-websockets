@@ -32,7 +32,7 @@ func main() {
 	// Enable pprof hooks
 	go func() {
 		if err := http.ListenAndServe("localhost:6060", nil); err != nil {
-			log.Fatalf("Pprof failed:", err)
+			log.Fatalf("Pprof failed: %v", err)
 		}
 	}()
 
